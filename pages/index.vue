@@ -3,11 +3,26 @@
     <Logo />
     <!-- <Logo dark-background /> -->
     <h1 class="leads__title">Leads</h1>
+    {{leads}}
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      leads: []
+    }
+  },
+
+  async fetch() {
+    this.leads = await fetch('https://jsonplaceholder.typicode.com/users').then(res =>
+      res.json()
+    )
+  },
+  
+  fetchOnServer: false
+}
 </script>
 
 <style lang="scss" scoped="true">
