@@ -1,5 +1,5 @@
 <template>
-  <svg width="141" height="50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="141" height="50" fill="none" class="logo_vough" xmlns="http://www.w3.org/2000/svg">
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"
@@ -39,3 +39,8 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped="true">
+
+.logo_vough{height: 100%; display: table; float: left;}
+</style>

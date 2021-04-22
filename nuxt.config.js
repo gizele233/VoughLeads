@@ -13,7 +13,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'Vough Leads', name: 'Vough Leads', content: 'Site destinado a pesquisa de leads da companhia Vough' },
     ],
     link: [
       {
@@ -32,6 +32,7 @@ export default {
 
   buildModules: ['@nuxtjs/style-resources', '@nuxtjs/eslint-module'],
 
+
   styleResources: {
     scss: './assets/scss/*.scss',
   },
@@ -41,9 +42,9 @@ export default {
   build: {},
 
   extend(config, ctx) {
-    if (ctx.dev && ctx.isClient) {
+    if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
-            enforce : 'prettier',
+            enforce : 'pre',
             test    : /\.(js|vue)$/,
             loader  : 'eslint-loader',
             exclude : /(node_modules)/,
